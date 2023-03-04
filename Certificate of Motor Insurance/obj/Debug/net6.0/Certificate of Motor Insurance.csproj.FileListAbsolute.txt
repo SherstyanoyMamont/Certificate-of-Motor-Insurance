@@ -1,0 +1,30 @@
+C:\Users\iikor\OneDrive - Limerick and Clare ETB\Software Arcitecture\Skilld Demonstrations\GROUP PROJECT\Certificate of Motor Insurance\Certificate of Motor Insurance\bin\Debug\net6.0\Certificate of Motor Insurance.exe
+C:\Users\iikor\OneDrive - Limerick and Clare ETB\Software Arcitecture\Skilld Demonstrations\GROUP PROJECT\Certificate of Motor Insurance\Certificate of Motor Insurance\bin\Debug\net6.0\Certificate of Motor Insurance.deps.json
+C:\Users\iikor\OneDrive - Limerick and Clare ETB\Software Arcitecture\Skilld Demonstrations\GROUP PROJECT\Certificate of Motor Insurance\Certificate of Motor Insurance\bin\Debug\net6.0\Certificate of Motor Insurance.runtimeconfig.json
+C:\Users\iikor\OneDrive - Limerick and Clare ETB\Software Arcitecture\Skilld Demonstrations\GROUP PROJECT\Certificate of Motor Insurance\Certificate of Motor Insurance\bin\Debug\net6.0\Certificate of Motor Insurance.dll
+C:\Users\iikor\OneDrive - Limerick and Clare ETB\Software Arcitecture\Skilld Demonstrations\GROUP PROJECT\Certificate of Motor Insurance\Certificate of Motor Insurance\bin\Debug\net6.0\Certificate of Motor Insurance.pdb
+C:\Users\iikor\OneDrive - Limerick and Clare ETB\Software Arcitecture\Skilld Demonstrations\GROUP PROJECT\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\Certificate of Motor Insurance.csproj.AssemblyReference.cache
+C:\Users\iikor\OneDrive - Limerick and Clare ETB\Software Arcitecture\Skilld Demonstrations\GROUP PROJECT\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\Certificate of Motor Insurance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iikor\OneDrive - Limerick and Clare ETB\Software Arcitecture\Skilld Demonstrations\GROUP PROJECT\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\Certificate of Motor Insurance.AssemblyInfoInputs.cache
+C:\Users\iikor\OneDrive - Limerick and Clare ETB\Software Arcitecture\Skilld Demonstrations\GROUP PROJECT\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\Certificate of Motor Insurance.AssemblyInfo.cs
+C:\Users\iikor\OneDrive - Limerick and Clare ETB\Software Arcitecture\Skilld Demonstrations\GROUP PROJECT\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\Certificate of Motor Insurance.csproj.CoreCompileInputs.cache
+C:\Users\iikor\OneDrive - Limerick and Clare ETB\Software Arcitecture\Skilld Demonstrations\GROUP PROJECT\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\Certificate of Motor Insurance.dll
+C:\Users\iikor\OneDrive - Limerick and Clare ETB\Software Arcitecture\Skilld Demonstrations\GROUP PROJECT\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\refint\Certificate of Motor Insurance.dll
+C:\Users\iikor\OneDrive - Limerick and Clare ETB\Software Arcitecture\Skilld Demonstrations\GROUP PROJECT\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\Certificate of Motor Insurance.pdb
+C:\Users\iikor\OneDrive - Limerick and Clare ETB\Software Arcitecture\Skilld Demonstrations\GROUP PROJECT\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\Certificate of Motor Insurance.genruntimeconfig.cache
+C:\Users\iikor\OneDrive - Limerick and Clare ETB\Software Arcitecture\Skilld Demonstrations\GROUP PROJECT\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\ref\Certificate of Motor Insurance.dll
+\\wsl.localhost\Ubuntu\home\iikorotkov\Certificate of Motor Insurance\Certificate of Motor Insurance\bin\Debug\net6.0\Certificate of Motor Insurance.exe
+\\wsl.localhost\Ubuntu\home\iikorotkov\Certificate of Motor Insurance\Certificate of Motor Insurance\bin\Debug\net6.0\Certificate of Motor Insurance.deps.json
+\\wsl.localhost\Ubuntu\home\iikorotkov\Certificate of Motor Insurance\Certificate of Motor Insurance\bin\Debug\net6.0\Certificate of Motor Insurance.runtimeconfig.json
+\\wsl.localhost\Ubuntu\home\iikorotkov\Certificate of Motor Insurance\Certificate of Motor Insurance\bin\Debug\net6.0\Certificate of Motor Insurance.dll
+\\wsl.localhost\Ubuntu\home\iikorotkov\Certificate of Motor Insurance\Certificate of Motor Insurance\bin\Debug\net6.0\Certificate of Motor Insurance.pdb
+\\wsl.localhost\Ubuntu\home\iikorotkov\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\Certificate of Motor Insurance.csproj.AssemblyReference.cache
+\\wsl.localhost\Ubuntu\home\iikorotkov\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\Certificate of Motor Insurance.GeneratedMSBuildEditorConfig.editorconfig
+\\wsl.localhost\Ubuntu\home\iikorotkov\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\Certificate of Motor Insurance.AssemblyInfoInputs.cache
+\\wsl.localhost\Ubuntu\home\iikorotkov\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\Certificate of Motor Insurance.AssemblyInfo.cs
+\\wsl.localhost\Ubuntu\home\iikorotkov\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\Certificate of Motor Insurance.csproj.CoreCompileInputs.cache
+\\wsl.localhost\Ubuntu\home\iikorotkov\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\Certificate of Motor Insurance.dll
+\\wsl.localhost\Ubuntu\home\iikorotkov\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\refint\Certificate of Motor Insurance.dll
+\\wsl.localhost\Ubuntu\home\iikorotkov\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\Certificate of Motor Insurance.pdb
+\\wsl.localhost\Ubuntu\home\iikorotkov\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\Certificate of Motor Insurance.genruntimeconfig.cache
+\\wsl.localhost\Ubuntu\home\iikorotkov\Certificate of Motor Insurance\Certificate of Motor Insurance\obj\Debug\net6.0\ref\Certificate of Motor Insurance.dll
