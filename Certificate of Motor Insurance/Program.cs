@@ -1,172 +1,129 @@
 ﻿namespace Certificate_of_Motor_Insurance
 {
-    class Car
-    {
-        public string Make { get; set; }
-        public string Model { get; set; }
-
-        public Car(string make, string model)
-        {
-            Make = make;
-            Model = model;
-        }
-    }
-
     internal class Program
     {
-        
         static void Main(string[] args)
         {
-            // Prompt the user for their gender, age, location, car model, emissions, and coverage.
+            bool resultAge = false;
+            int personAge = 0;
+            
+            // Prompt the user for their gender, full name, age, location:
             Console.WriteLine("Enter your gender (M or F):");
-            string? gender = Console.ReadLine();
+            string? personGender = Console.ReadLine();
+            while (personGender != "M" && personGender != "F" && personGender != "Female" && personGender != "Male") // Validation of input male
+            {
+                Console.WriteLine("Error: Enter your gender as in the example in brackets (M or F):");
+                personGender = Console.ReadLine();
+            }
+            Console.WriteLine("Enter your full name (First name and Second name:");
+            string? fullName = Console.ReadLine();
+            
+            while (resultAge == false) // Validation of input age
+            {
+                Console.WriteLine("Enter your age:");
+                resultAge = int.TryParse(Console.ReadLine(), out personAge);
+                if (resultAge == false)
+                {
+                    Console.WriteLine("Error: Enter your age in integer number please:");
+                }
+            }
+            Console.WriteLine("Enter your location (County):");
+            string? personLocation = Console.ReadLine();
 
-            Console.WriteLine("Enter your age:");
-            int age = int.Parse(Console.ReadLine());
+            Person client = new Person(personGender, fullName, personAge, personLocation);
 
-            Console.WriteLine("Enter your location:");
-            string? location = Console.ReadLine();
-
+            // Main information about client's car
             Console.WriteLine("Enter your car make:");
             string? carMake = Console.ReadLine();
 
             Console.WriteLine("Enter your car model:");
             string? carModel = Console.ReadLine();
 
-            Car clientsСar = new Car(carMake, carModel);
-
-            Console.WriteLine("Enter your emissions:");
+            Console.WriteLine("Enter your emissions (High, Medium or Low):");
             string? emissions = Console.ReadLine();
 
-            Console.WriteLine("Enter your coverage:");
+            Console.WriteLine("Enter your coverage (Fully or Partial):");
             string? coverage = Console.ReadLine();
 
+            Car clientsСar = new Car(carMake, carModel, emissions, coverage);
+
             // Calculate the final price using the CalculateInsuranceCost function and display the result to the user.
-            double finalPrice = CalculateInsuranceCost(gender, age, location, clientsСar, emissions, coverage);
+            double finalPrice = CalculateInsuranceCost(client, clientsСar);
             Console.WriteLine($"Insurance cost: {finalPrice}");
         }
-
-        static double CalculateInsuranceCost(string? gender, int age, string? location, Car car, string? emissions, string? coverage)
+        static double CalculateInsuranceCost(Person client, Car car)
         {
-            // Define the base price for the insurance.
-            double basePrice = 1000;
+            double basePrice = 1000; // Define the base price for the insurance.
 
             // Define the factors for each of the user's inputs.
-            double genderFactor = gender == "M" ? 2 : 0.8; // Higher for male drivers
-            double ageFactor = genderFactor * basePrice * -1; // Higher for younger drivers
-            if (age < 20)
+            double genderFactor = client.Gender == "M" || client.Gender == "Male" || client.Gender == "m" ? 2 : 0.8; // Higher for male drivers
+            double ageFactor = client.Age switch
             {
-                ageFactor = genderFactor * basePrice * 0.2;
-            }
-            else if(age <= 35 && age >= 20)
+                < 20 => genderFactor * basePrice * 0.2,
+                >= 20 and <= 35 => genderFactor * basePrice * -0.4,
+                < 80 and > 35 => genderFactor * basePrice * -0.65,
+                _ => genderFactor * basePrice * -1
+            };
+            // Choise the location factor
+            double locationFactor = client.Location switch
             {
-                ageFactor = genderFactor * basePrice * -0.4;
-            }
-            else if (age < 80 && age > 35)
-            {
-                ageFactor = genderFactor * basePrice * -0.65;
-            }
-            double locationFactor = 0; // neutral
-            if (location == "Clare")
-            {
-                locationFactor = 225;
-            }
-            else if (location == "Limerick")
-            {
-                locationFactor = -75;
-            }
-            else if (location == "Tipperary")
-            {
-                locationFactor = -80;
-            }
-            else if (location == "Waterford")
-            {
-                locationFactor = -100;
-            }
-            else if (location == "Cork" || location == "Kerry")
-            {
-                locationFactor = 50;
-            }
+                "Clare" or "Cl" => 225,
+                "Limerick" or "L" => -75,
+                "Tipperary" or "T" => -80,
+                "Waterford" or "W" => -100,
+                "Cork" or "Kerry" or "Co" or "K" => 50,
+                _ => 0
+            };
             double carModelFactor = GetCarModelFactor(car); // Higher for certain car models
-            double emissionsFactor = 150; // Meaning for middle emission
-            if (emissions == "High")
-            {
-                emissionsFactor = 300;
-            }
-            else if (emissions == "Low")
-            {
-                emissionsFactor = -55;
-            }
-            double coverageFactor = coverage == "Fully" ? 200 : -120; // Higher for full coverage
-
+            double coverageFactor = GetCarCoverageFactor(car);  // Higher for full coverage
+            double emissionsFactor = car.Coverage == "Fully" || car.Coverage == "F" ? 200 : -120; ; // Meaning for middle emission
 
             // Calculate the final price based on the factors and the base price.
             double finalPrice = basePrice * genderFactor + ageFactor + locationFactor + carModelFactor + emissionsFactor + coverageFactor;
-
-
-            // Return the final price.
-            return finalPrice;
+            return finalPrice; // Return the final price.
         }
-        static double GetCarModelFactor(Car car)
+        static double GetCarCoverageFactor(Car car)
         {
-            // Define the factors for certain car models.
-            switch (car.Make)
+            if (car.Emission == "High" || car.Emission == "H") { return 300; }
+            else if (car.Emission == "Low" || car.Emission == "L") { return -55; }
+            else { return 150; }
+        }
+        static double GetCarModelFactor(Car car) // Define the factors for certain car models.
+        {
+            return car.Make switch
             {
-                case "BMW":
-                    switch (car.Model)
-                    {
-                        case "Convertible":
-                            return 200;
-                        case "Gratn Terismo":
-                            return 250;
-                        case "X6":
-                            return 300;
-                        case "Z4":
-                            return 175;
-                        default:
-                            return 300;
-                    }
-                case "Opel":
-                    switch (car.Model)
-                    {
-                        case "Corsa":
-                            return 50;
-                        case "Astra":
-                            return 105;
-                        case "Vectra":
-                            return 150;
-                        default:
-                            return 150;
-                    }
-                case "Toyota":
-                    switch (car.Model)
-                    {
-                        case "Yaris":
-                            return 50;
-                        case "Auris":
-                            return 75;
-                        case "Corolla":
-                            return 100;
-                        case "Avensis":
-                            return 125;
-                        default:
-                            return 1.1;
-                    }
-                case "Renault":
-                    switch (car.Model)
-                    {
-                        case "Fleunce":
-                            return 100;
-                        case "Megane":
-                            return 75;
-                        case "Clio":
-                            return 50;
-                        default:
-                            return 100;
-                    }
-                default:
-                    return 1.0;
-            }
+                "BMW" => car.Model switch
+                {
+                    "Convertible" => 200,
+                    "Gratn Terismo" => 250,
+                    "X6" => 300,
+                    "Z4" => 175,
+                    _ => 300
+                },
+                "Opel" => car.Model switch
+                {
+                    "Corsa" => 50,
+                    "Astra" => 105,
+                    "Vectra" => 150,
+                    _ => 150
+                },
+                "Toyota" => car.Model switch
+                {
+                    "Yaris" => 50,
+                    "Auris" => 75,
+                    "Corolla" => 100,
+                    "Avensis" => 125,
+                    _ => 125
+                },
+                "Renault" => car.Model switch
+                {
+                    "Fleunce" => 100,
+                    "Megane" => 75,
+                    "Clio" => 50,
+                    _ => 100
+                },
+                _ => 300
+            };
         }
     }
 }
