@@ -35,29 +35,26 @@
             // Main information about client's car
             Console.WriteLine("Enter your car make:");
             string? carMake = Console.ReadLine();
-
             Console.WriteLine("Enter your car model:");
             string? carModel = Console.ReadLine();
-
             Console.WriteLine("Enter your emissions (High, Medium or Low):");
             string? emissions = Console.ReadLine();
-
             Console.WriteLine("Enter your coverage (Fully or Partial):");
             string? coverage = Console.ReadLine();
 
             Car clientsСar = new Car(carMake, carModel, emissions, coverage);
 
             // Calculate the final price using the CalculateInsuranceCost function and display the result to the user.
-            double finalPrice = CalculateInsuranceCost(client, clientsСar);
+            double finalPrice = CalculateInsuranceCost(client.Gender, client.Age, client.Location, clientsСar);;
             Console.WriteLine($"Insurance cost: {finalPrice}");
         }
-        static double CalculateInsuranceCost(Person client, Car car)
+        static double CalculateInsuranceCost(string? Gender, int Age, string? Location, Car clientsСar)
         {
             double basePrice = 1000; // Define the base price for the insurance.
 
             // Define the factors for each of the user's inputs.
-            double genderFactor = client.Gender == "M" || client.Gender == "Male" || client.Gender == "m" ? 2 : 0.8; // Higher for male drivers
-            double ageFactor = client.Age switch
+            double genderFactor = Gender == "M" || Gender == "Male" || Gender == "m" ? 2 : 0.8; // Higher for male drivers
+            double ageFactor = Age switch
             {
                 < 20 => genderFactor * basePrice * 0.2,
                 >= 20 and <= 35 => genderFactor * basePrice * -0.4,
@@ -65,7 +62,7 @@
                 _ => genderFactor * basePrice * -1
             };
             // Choise the location factor
-            double locationFactor = client.Location switch
+            double locationFactor = Location switch
             {
                 "Clare" or "Cl" => 225,
                 "Limerick" or "L" => -75,
@@ -74,25 +71,25 @@
                 "Cork" or "Kerry" or "Co" or "K" => 50,
                 _ => 0
             };
-            double carModelFactor = GetCarModelFactor(car); // Higher for certain car models
-            double coverageFactor = GetCarCoverageFactor(car);  // Higher for full coverage
-            double emissionsFactor = car.Coverage == "Fully" || car.Coverage == "F" ? 200 : -120; ; // Meaning for middle emission
-
+            double carModelFactor = GetCarModelFactor(clientsСar.Make, clientsСar.Model); // Higher for certain car models
+            double emissionsFactor = GetCarEmissionFactor(clientsСar.Emission);  // Higher for full coverage
+            double coverageFactor = clientsСar.Coverage == "Fully" || clientsСar.Coverage == "F" ? 200 : -120; ; // Meaning for middle emission
+            
             // Calculate the final price based on the factors and the base price.
             double finalPrice = basePrice * genderFactor + ageFactor + locationFactor + carModelFactor + emissionsFactor + coverageFactor;
             return finalPrice; // Return the final price.
         }
-        static double GetCarCoverageFactor(Car car)
+        static double GetCarEmissionFactor(string? Emission)
         {
-            if (car.Emission == "High" || car.Emission == "H") { return 300; }
-            else if (car.Emission == "Low" || car.Emission == "L") { return -55; }
+            if (Emission == "High" || Emission == "H") { return 300; }
+            else if (Emission == "Low" || Emission == "L") { return -55; }
             else { return 150; }
         }
-        static double GetCarModelFactor(Car car) // Define the factors for certain car models.
+        static double GetCarModelFactor(string? Make, string? Model) // Define the factors for certain car models.
         {
-            return car.Make switch
+            return Make switch
             {
-                "BMW" => car.Model switch
+                "BMW" => Model switch
                 {
                     "Convertible" => 200,
                     "Gratn Terismo" => 250,
@@ -100,14 +97,14 @@
                     "Z4" => 175,
                     _ => 300
                 },
-                "Opel" => car.Model switch
+                "Opel" => Model switch
                 {
                     "Corsa" => 50,
                     "Astra" => 105,
                     "Vectra" => 150,
                     _ => 150
                 },
-                "Toyota" => car.Model switch
+                "Toyota" => Model switch
                 {
                     "Yaris" => 50,
                     "Auris" => 75,
@@ -115,7 +112,7 @@
                     "Avensis" => 125,
                     _ => 125
                 },
-                "Renault" => car.Model switch
+                "Renault" => Model switch
                 {
                     "Fleunce" => 100,
                     "Megane" => 75,
