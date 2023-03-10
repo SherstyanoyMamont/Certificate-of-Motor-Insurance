@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\wsl.localhost\\Ubuntu\\home\\iikorotkov\\Certificate of Motor Insurance\\Certificate of Motor Insurance\\Certificate of Motor Insurance.csproj",
+      "projectUniqueName": "\\\\wsl.localhost\\Ubuntu\\home\\Certificate-of-Motor-Insurance\\Certificate of Motor Insurance\\Certificate of Motor Insurance.csproj",
       "projectName": "Certificate of Motor Insurance",
-      "projectPath": "\\\\wsl.localhost\\Ubuntu\\home\\iikorotkov\\Certificate of Motor Insurance\\Certificate of Motor Insurance\\Certificate of Motor Insurance.csproj",
+      "projectPath": "\\\\wsl.localhost\\Ubuntu\\home\\Certificate-of-Motor-Insurance\\Certificate of Motor Insurance\\Certificate of Motor Insurance.csproj",
       "packagesPath": "C:\\Users\\iikor\\.nuget\\packages\\",
-      "outputPath": "\\\\wsl.localhost\\Ubuntu\\home\\iikorotkov\\Certificate of Motor Insurance\\Certificate of Motor Insurance\\obj\\",
+      "outputPath": "\\\\wsl.localhost\\Ubuntu\\home\\Certificate-of-Motor-Insurance\\Certificate of Motor Insurance\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\iikor\\AppData\\Roaming\\NuGet\\NuGet.Config",

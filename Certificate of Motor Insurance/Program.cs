@@ -45,82 +45,10 @@
             Car clientsСar = new Car(carMake, carModel, emissions, coverage);
 
             // Calculate the final price using the CalculateInsuranceCost function and display the result to the user.
-            double finalPrice = CalculateInsuranceCost(client.Gender, client.Age, client.Location, clientsСar);;
+            double finalPrice = Calculator.CalculateInsuranceCost(client.Gender, client.Age, client.Location, clientsСar);;
             Console.WriteLine($"Insurance cost: {finalPrice}");
         }
-        static double CalculateInsuranceCost(string? Gender, int Age, string? Location, Car clientsСar)
-        {
-            double basePrice = 1000; // Define the base price for the insurance.
-
-            // Define the factors for each of the user's inputs.
-            double genderFactor = Gender == "M" || Gender == "Male" || Gender == "m" ? 2 : 0.8; // Higher for male drivers
-            double ageFactor = Age switch
-            {
-                < 20 => genderFactor * basePrice * 0.2,
-                >= 20 and <= 35 => genderFactor * basePrice * -0.4,
-                < 80 and > 35 => genderFactor * basePrice * -0.65,
-                _ => genderFactor * basePrice * -1
-            };
-            // Choise the location factor
-            double locationFactor = Location switch
-            {
-                "Clare" or "Cl" => 225,
-                "Limerick" or "L" => -75,
-                "Tipperary" or "T" => -80,
-                "Waterford" or "W" => -100,
-                "Cork" or "Kerry" or "Co" or "K" => 50,
-                _ => 0
-            };
-            double carModelFactor = GetCarModelFactor(clientsСar.Make, clientsСar.Model); // Higher for certain car models
-            double emissionsFactor = GetCarEmissionFactor(clientsСar.Emission);  // Higher for full coverage
-            double coverageFactor = clientsСar.Coverage == "Fully" || clientsСar.Coverage == "F" ? 200 : -120; ; // Meaning for middle emission
-            
-            // Calculate the final price based on the factors and the base price.
-            double finalPrice = basePrice * genderFactor + ageFactor + locationFactor + carModelFactor + emissionsFactor + coverageFactor;
-            return finalPrice; // Return the final price.
-        }
-        static double GetCarEmissionFactor(string? Emission)
-        {
-            if (Emission == "High" || Emission == "H") { return 300; }
-            else if (Emission == "Low" || Emission == "L") { return -55; }
-            else { return 150; }
-        }
-        static double GetCarModelFactor(string? Make, string? Model) // Define the factors for certain car models.
-        {
-            return Make switch
-            {
-                "BMW" => Model switch
-                {
-                    "Convertible" => 200,
-                    "Gratn Terismo" => 250,
-                    "X6" => 300,
-                    "Z4" => 175,
-                    _ => 300
-                },
-                "Opel" => Model switch
-                {
-                    "Corsa" => 50,
-                    "Astra" => 105,
-                    "Vectra" => 150,
-                    _ => 150
-                },
-                "Toyota" => Model switch
-                {
-                    "Yaris" => 50,
-                    "Auris" => 75,
-                    "Corolla" => 100,
-                    "Avensis" => 125,
-                    _ => 125
-                },
-                "Renault" => Model switch
-                {
-                    "Fleunce" => 100,
-                    "Megane" => 75,
-                    "Clio" => 50,
-                    _ => 100
-                },
-                _ => 300
-            };
-        }
+        
     }
+
 }

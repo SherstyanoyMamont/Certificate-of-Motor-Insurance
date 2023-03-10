@@ -12,13 +12,14 @@ namespace Certificate_of_Motor_Insurance
         public string FullName { get; private set; }
         public int Age { get; private set; }
         public string Location { get; private set; }
-
-        public Person(string gender, string fullName, int age, string location)
+        public Car Car { get; private set; }
+        public Person(string gender, string fullName, int age, string location, Car car )
         {
             Gender = gender;
             FullName = fullName;
             Age = age;
             Location = location;
+            Car = car;
         }
     }
 }

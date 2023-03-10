@@ -12,7 +12,6 @@ namespace Certificate_of_Motor_Insurance
         public string? Model { get; private set; }
         public string? Emission { get; private set; }
         public string? Coverage { get; private set; }
-
         public Car(string? make, string? model, string? emission, string? coverage)
         {
             Make = make;
