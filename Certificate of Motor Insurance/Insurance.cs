@@ -13,17 +13,18 @@ namespace Certificate_of_Motor_Insurance
         public double FinalPrice { get; private set; }
         public string? CertificateNumber { get; private set; }
         public Person Client { get; private set; }
+        internal ListInsurance ListInsurance { get; private set; }
         public Insurance(Person client, string? coverage) 
         {
-            BasePrice = 1000; // Define the base price for the insurance.
-            CertificateNumber = "FCCC";
+            BasePrice = 1000;                                                                                                           // Define the base price for the insurance.
+            CertificateNumber = "FCCC" + client.DateOfBirth.ToString("yyyyMMddHH", System.Globalization.CultureInfo.InvariantCulture);  // Create Certificate Number from client's date of birth
             Client = client;
             Coverage = coverage;
             FinalPrice = CalculateInsuranceCost(client);
         }
         public double CalculateInsuranceCost(Person client)
         {
-            double genderFactor = client.Gender == "M" || client.Gender == "Male" || client.Gender == "m" ? 2 : 0.8; // Higher for male drivers
+            double genderFactor = client.Gender == "M" || client.Gender == "Male" || client.Gender == "m" ? 2 : 0.8;                    // Higher for male drivers
             double ageFactor = client.Age switch
             {
                 < 20 => genderFactor * BasePrice * 0.2,
@@ -31,7 +32,7 @@ namespace Certificate_of_Motor_Insurance
                 < 80 and > 35 => genderFactor * BasePrice * -0.65,
                 _ => genderFactor * BasePrice * -1
             };
-            double locationFactor = client.Location switch  // Choise the location factor
+            double locationFactor = client.Location switch    // Choise the location factor
             {
                 "Clare" or "Cl" => 225,
                 "Limerick" or "L" => -75,
@@ -40,7 +41,7 @@ namespace Certificate_of_Motor_Insurance
                 "Cork" or "Kerry" or "Co" or "K" => 50,
                 _ => 0
             };
-            double carModelFactor = client.Car.Make switch  // Higher for certain car models
+            double carModelFactor = client.Car.Make switch    // Higher for certain car models
             {
                 "BMW" => client.Car.Model switch
                 {
@@ -74,10 +75,10 @@ namespace Certificate_of_Motor_Insurance
                 },
                 _ => 300
             };
-            double emissionsFactor = 150;// Higher for full coverage
+            double emissionsFactor = 150;                                                                                                  // Higher for full coverage
             if (client.Car.Emission == "High" || client.Car.Emission == "H") { emissionsFactor = 300; }
             else if (client.Car.Emission == "Low" || client.Car.Emission == "L") { emissionsFactor = - 55; }
-            double coverageFactor = Coverage == "Fully" || Coverage == "F" ? 200 : -120; ; // Meaning for middle emission
+            double coverageFactor = Coverage == "Fully" || Coverage == "F" ? 200 : -120; ;                                                 // Meaning for middle emission
 
             return FinalPrice = BasePrice * genderFactor + ageFactor + locationFactor + carModelFactor + emissionsFactor + coverageFactor; // Return the final price.
         }

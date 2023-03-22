@@ -16,7 +16,7 @@
             }
             Console.WriteLine("Enter your full name (First name and Second name:)");
             string? fullName = Console.ReadLine();
-            while (resultAge == false)                   // Validation of input age
+            while (resultAge == false)                                                                              // Validation of input age
             {
                 Console.WriteLine("Enter your date of birth (dd/mm/yyyy):");
                 resultAge = DateTime.TryParse(Console.ReadLine(), out dateOfBirth);
@@ -27,7 +27,7 @@
             }
             Console.WriteLine("Enter your location (County):");
             string? personLocation = Console.ReadLine();
-            Console.WriteLine("Enter your car make:");   // Main information about client's car:
+            Console.WriteLine("Enter your car make:");                                                              // Main information about client's car:
             string? carMake = Console.ReadLine();
             Console.WriteLine("Enter your car model:");
             string? carModel = Console.ReadLine();
@@ -35,13 +35,18 @@
             string? emissions = Console.ReadLine();
             Console.WriteLine("Enter your coverage (Fully or Partial):");
             string? coverage = Console.ReadLine();
+            Console.WriteLine("Enter your E-mail:");
+            string? email = Console.ReadLine();
+            Console.WriteLine("Enter your phone number:");
+            string? phoneNumber = Console.ReadLine();
 
             Car car = new Car(carMake, carModel, emissions);
-            Person client = new Person(personGender, fullName, dateOfBirth, personLocation, car);
+            Person client = new Person(personGender, fullName, dateOfBirth, personLocation, car, email, phoneNumber);
             Insurance inshurance1 = new Insurance(client, coverage);
             ListInsurance List = new ListInsurance(inshurance1);
 
-            Console.WriteLine($"Insurance cost: {inshurance1.FinalPrice}");   // Calculate the final price using the CalculateInsuranceCost function and display the result to the user.
+            Console.WriteLine($"Insurance cost: {inshurance1.FinalPrice}");                                          // Calculate the final price using the CalculateInsuranceCost function and display the result to the user.
+            Console.WriteLine(inshurance1.CertificateNumber);
         }
     }
 }

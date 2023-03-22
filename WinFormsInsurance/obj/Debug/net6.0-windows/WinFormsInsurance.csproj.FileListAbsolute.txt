@@ -1,0 +1,17 @@
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.csproj.AssemblyReference.cache
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.Form1.resources
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.csproj.GenerateResource.cache
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.GeneratedMSBuildEditorConfig.editorconfig
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.AssemblyInfoInputs.cache
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.AssemblyInfo.cs
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.csproj.CoreCompileInputs.cache
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\bin\Debug\net6.0-windows\WinFormsInsurance.exe
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\bin\Debug\net6.0-windows\WinFormsInsurance.deps.json
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\bin\Debug\net6.0-windows\WinFormsInsurance.runtimeconfig.json
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\bin\Debug\net6.0-windows\WinFormsInsurance.dll
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\bin\Debug\net6.0-windows\WinFormsInsurance.pdb
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.dll
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\refint\WinFormsInsurance.dll
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.pdb
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.genruntimeconfig.cache
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\ref\WinFormsInsurance.dll

@@ -11,6 +11,7 @@ namespace Certificate_of_Motor_Insurance
         public string? Make { get; private set; }
         public string? Model { get; private set; }
         public string? Emission { get; private set; }
+        internal Person Person { get; private set; }
         public Car(string? make, string? model, string? emission)
         {
             Make = make;
