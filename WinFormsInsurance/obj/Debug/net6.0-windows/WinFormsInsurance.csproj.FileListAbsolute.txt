@@ -15,3 +15,16 @@
 \\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.pdb
 \\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.genruntimeconfig.cache
 \\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\ref\WinFormsInsurance.dll
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.Properties.Resources.resources
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\bin\Debug\net6.0-windows\x64\pdfium.dll
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.csproj.CopyComplete
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\bin\Debug\net6.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.Core.dll
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.WinForms.dll
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.Wpf.dll
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\bin\Debug\net6.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\bin\Debug\net6.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\Interop.Microsoft.Office.Interop.Word.dll
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.csproj.ResolveComReference.cache
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.SearchForm.resources
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\bin\Debug\net6.0-windows\Certificate of Motor Insurance - without data.docx

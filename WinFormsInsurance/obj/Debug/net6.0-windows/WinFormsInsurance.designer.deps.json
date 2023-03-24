@@ -5,7 +5,90 @@
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v6.0": {}
+    ".NETCoreApp,Version=v6.0": {
+      "DocumentFormat.OpenXml/2.19.0": {
+        "dependencies": {
+          "System.IO.Packaging": "4.7.0"
+        },
+        "runtime": {
+          "lib/net6.0/DocumentFormat.OpenXml.dll": {
+            "assemblyVersion": "2.19.0.0",
+            "fileVersion": "2.19.0.0"
+          }
+        }
+      },
+      "Microsoft.Web.WebView2/1.0.1661.34": {
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll": {
+            "assemblyVersion": "1.0.1661.34",
+            "fileVersion": "1.0.1661.34"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll": {
+            "assemblyVersion": "1.0.1661.34",
+            "fileVersion": "1.0.1661.34"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll": {
+            "assemblyVersion": "1.0.1661.34",
+            "fileVersion": "1.0.1661.34"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/WebView2Loader.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "1.0.1661.34"
+          },
+          "runtimes/win-x64/native/WebView2Loader.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.0.1661.34"
+          },
+          "runtimes/win-x86/native/WebView2Loader.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "1.0.1661.34"
+          }
+        }
+      },
+      "PdfiumViewer.Native.x86_64.v8-xfa/2018.4.8.256": {},
+      "System.IO.Packaging/4.7.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.IO.Packaging.dll": {
+            "assemblyVersion": "4.0.5.0",
+            "fileVersion": "4.700.19.56404"
+          }
+        }
+      }
+    }
   },
-  "libraries": {}
+  "libraries": {
+    "DocumentFormat.OpenXml/2.19.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BLFqodowHZHR/A/sKU/6e+63J5ONWDdv8hEuSZOUiBfGFuVmsG9P3o+LMSq+dajNWE1q+lqVSa1H5FuhLX8/fA==",
+      "path": "documentformat.openxml/2.19.0",
+      "hashPath": "documentformat.openxml.2.19.0.nupkg.sha512"
+    },
+    "Microsoft.Web.WebView2/1.0.1661.34": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TsLBwso8/7VSSRV6yR8c7ocQM8SgbP1RBVJgbIkr9BnkM5INTT6Jl6v7bJddfIUzggYXspR0/uyTnKRVEnkC1A==",
+      "path": "microsoft.web.webview2/1.0.1661.34",
+      "hashPath": "microsoft.web.webview2.1.0.1661.34.nupkg.sha512"
+    },
+    "PdfiumViewer.Native.x86_64.v8-xfa/2018.4.8.256": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0RQwmLMPKOHBRqRK+NPMR2H5EQ4KlYO+LnT3Y2lByVUa5/JTPCMswL46JEXX+/MAfJtCpS2PzJvy6QzpH2nuIw==",
+      "path": "pdfiumviewer.native.x86_64.v8-xfa/2018.4.8.256",
+      "hashPath": "pdfiumviewer.native.x86_64.v8-xfa.2018.4.8.256.nupkg.sha512"
+    },
+    "System.IO.Packaging/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9VV4KAbgRQZ79iEoG40KIeZy38O30oWwewScAST879+oki8g/Wa2HXZQgrhDDxQM4GkP1PnRJll05NMiVPbYAw==",
+      "path": "system.io.packaging/4.7.0",
+      "hashPath": "system.io.packaging.4.7.0.nupkg.sha512"
+    }
+  }
 }
