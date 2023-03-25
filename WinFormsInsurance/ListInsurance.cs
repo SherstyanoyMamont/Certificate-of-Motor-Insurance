@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Certificate_of_Motor_Insurance
 {
-    internal class ListInsurance
+    public class ListInsurance
     {
         public List<Insurance> InsurancesList = new List<Insurance>();
         public Insurance Insurance { get; private set; }

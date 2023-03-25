@@ -1,6 +1,7 @@
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+﻿using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System;
 using Certificate_of_Motor_Insurance;
+using DocumentFormat.OpenXml.Spreadsheet;
 
 
 namespace WinFormsInsurance
@@ -10,22 +11,6 @@ namespace WinFormsInsurance
         [STAThread]
         static void Main()
         {
-            string? fullName = "Ivan Korotkov";
-            DateTime dateOfBirth = DateTime.Now;
-            string? personLocation = "L";
-            string? phoneNumber = "0852848110";
-            string? email = "iikorotkov.gi15@gmail.com";
-            string? personGender = "Mr";
-            string? coverage = "F";
-            string? emissions = "H";
-            string? carModel = "BMW";
-            string? carMake = "X6";
-
-            Car car = new Car(carMake, carModel, emissions);
-            Person client = new Person(personGender, fullName, dateOfBirth, personLocation, car, email, phoneNumber);
-            Insurance inshurance1 = new Insurance(client, coverage);
-            ListInsurance List = new ListInsurance(inshurance1);
-
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
         }
@@ -34,6 +19,32 @@ namespace WinFormsInsurance
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+//string? fullName = "Ivan Korotkov";
+//DateTime dateOfBirth = DateTime.Now;
+//string? personLocation = "L";
+//string? phoneNumber = "0852848110";
+//string? email = "iikorotkov.gi15@gmail.com";
+//string? personGender = "Mr";
+//string? coverage = "F";
+//string? emissions = "H";
+//string? carMakeAndModel = "BMW X6";
+
+// Объекты
+//Car car = new Car(carMakeAndModel, emissions);
+//Person client = new Person(personGender, fullName, dateOfBirth, personLocation, car, email, phoneNumber);
+//Insurance inshurance1 = new Insurance(client, coverage);
+//ListInsurance List = new ListInsurance(inshurance1);
 
 
 

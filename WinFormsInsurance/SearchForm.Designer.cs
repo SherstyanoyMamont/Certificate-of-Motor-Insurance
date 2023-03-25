@@ -55,7 +55,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1005, 683);
             Controls.Add(button1);
             Controls.Add(listBox1);
             Name = "SearchForm";

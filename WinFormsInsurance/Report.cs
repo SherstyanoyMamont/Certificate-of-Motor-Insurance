@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Certificate_of_Motor_Insurance;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,53 +14,43 @@ namespace WinFormsInsurance
     public partial class Report : Form
     {
         Bitmap pageImage;
+        public ListInsurance listInsurance;
 
         public Report()
         {
             InitializeComponent();
+        }
+        
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
+        // Присваиваем значения кнопкам
+        private void Report_Shown(object sender, EventArgs e)
+        {
+            lDocNumber.Text = "SN338599324"; //listInsurance.Insurance.CertificateNumber.ToString();
+        }
+
+        // Создаем документ ПДФ по форме
+        private void BtnPrint_Click_1(object sender, EventArgs e)  // По нажатию на кнопку создаем обкартинку...
+        {
+            pageImage = new Bitmap(richTextBox1.Size.Width, richTextBox1.Size.Height);
+            richTextBox1.DrawToBitmap(pageImage, richTextBox1.ClientRectangle);
+            printDocument1.Print();
+        }
+
+        // Печатаем картинку в пдф
+        private void printDocument1_PrintPage_1(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(pageImage, 0, 0);
         }
 
         private void Report_Load(object sender, EventArgs e)
         {
 
         }
-        private void button1_Click(object sender, EventArgs e)   // Print to PDF
-        {
-            //pageImage = new Bitmap(pagePanel.Size.Width, pagePanel.Size.Height);
-            //pagePanel.DrawToBitmap(pageImage, pagePanel.ClientRectangle);
-            //printDocument1.Print();
-        }
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            e.Graphics.DrawImage(pageImage, 0, 0);
-        }
-        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (e.CloseReason != CloseReason.ApplicationExitCall)
-            {
-                if (MessageBox.Show("Уже уходите?", "Выход", MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question) == DialogResult.No)
-                {
-                    e.Cancel = true;
-                }
-                else
-                {
-                    Application.Exit();
-                }
-            }
-        }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pagePanel_Paint(object sender, PaintEventArgs e)
+        // Вывод документа ПДФ в папку с файлом
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
             string fn = "CertificatePDF.pdf";
             var proc = new System.Diagnostics.Process();
@@ -67,26 +58,6 @@ namespace WinFormsInsurance
             proc.StartInfo.UseShellExecute = true;
             proc.Start();
         }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-        private void btnOpen_Click(object sender, EventArgs e)
-        {
-            //OpenFileDialog1.InitialDirectory = Path.Combine(Environment.CurrentDirectory);
-            //OpenFileDialog1.FileName = Path.Combine(Environment.CurrentDirectory, "CertificatePDF.pdf");
-        }
-
-        //if (OpenFileDialogFileDialog1.ShowDialog() == DialogResult.OK)
-        //{
-        //    switch (TabControl1.SelectedIndex)
-        //    {
-               
-        //    }
-        //}
     }
 }
 

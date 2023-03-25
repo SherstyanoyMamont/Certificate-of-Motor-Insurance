@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace Certificate_of_Motor_Insurance
 {
-    class Car
+   public  class Car
     {
-        public string? Make { get; private set; }
-        public string? Model { get; private set; }
+        public string? MakeAndModel{ get; private set; }
         public string? Emission { get; private set; }
         internal Person Person { get; private set; }
-        public Car(string? make, string? model, string? emission)
+        public Car(string? carMakeAndModel, string? emission)
         {
-            Make = make;
-            Model = model;
+            MakeAndModel = carMakeAndModel;
             Emission = emission;
         }
     }

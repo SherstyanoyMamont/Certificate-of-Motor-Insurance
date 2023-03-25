@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Certificate_of_Motor_Insurance
 {
-    class Person
+    public class Person
     {
         public DateTime DateOfBirth { get; private set; }
         public int Age { get { return (int)((DateTime.Now - DateOfBirth).TotalDays / 365.242199); } }

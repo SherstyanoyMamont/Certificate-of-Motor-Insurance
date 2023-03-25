@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Word = Microsoft.Office.Interop.Word;
 
 namespace WinFormsInsurance
 {
@@ -25,6 +24,7 @@ namespace WinFormsInsurance
 
         internal bool Process(Dictionary<string, string> items, bool showPreview)
         {
+            /*
             Word.Application app = null;
             try
             {
@@ -116,8 +116,8 @@ namespace WinFormsInsurance
                     app.Quit();
                 }
             }
-
-            return null;
+*/
+            return false;
         }
     }
 }

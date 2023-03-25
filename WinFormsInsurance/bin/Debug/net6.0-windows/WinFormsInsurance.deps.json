@@ -8,11 +8,23 @@
     ".NETCoreApp,Version=v6.0": {
       "WinFormsInsurance/1.0.0": {
         "dependencies": {
+          "DocumentFormat.OpenXml": "2.19.0",
           "Microsoft.Web.WebView2": "1.0.1661.34",
           "PdfiumViewer.Native.x86_64.v8-xfa": "2018.4.8.256"
         },
         "runtime": {
           "WinFormsInsurance.dll": {}
+        }
+      },
+      "DocumentFormat.OpenXml/2.19.0": {
+        "dependencies": {
+          "System.IO.Packaging": "4.7.0"
+        },
+        "runtime": {
+          "lib/net6.0/DocumentFormat.OpenXml.dll": {
+            "assemblyVersion": "2.19.0.0",
+            "fileVersion": "2.19.0.0"
+          }
         }
       },
       "Microsoft.Web.WebView2/1.0.1661.34": {
@@ -48,7 +60,8 @@
           }
         }
       },
-      "PdfiumViewer.Native.x86_64.v8-xfa/2018.4.8.256": {}
+      "PdfiumViewer.Native.x86_64.v8-xfa/2018.4.8.256": {},
+      "System.IO.Packaging/4.7.0": {}
     }
   },
   "libraries": {
@@ -56,6 +69,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "DocumentFormat.OpenXml/2.19.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BLFqodowHZHR/A/sKU/6e+63J5ONWDdv8hEuSZOUiBfGFuVmsG9P3o+LMSq+dajNWE1q+lqVSa1H5FuhLX8/fA==",
+      "path": "documentformat.openxml/2.19.0",
+      "hashPath": "documentformat.openxml.2.19.0.nupkg.sha512"
     },
     "Microsoft.Web.WebView2/1.0.1661.34": {
       "type": "package",
@@ -70,6 +90,13 @@
       "sha512": "sha512-0RQwmLMPKOHBRqRK+NPMR2H5EQ4KlYO+LnT3Y2lByVUa5/JTPCMswL46JEXX+/MAfJtCpS2PzJvy6QzpH2nuIw==",
       "path": "pdfiumviewer.native.x86_64.v8-xfa/2018.4.8.256",
       "hashPath": "pdfiumviewer.native.x86_64.v8-xfa.2018.4.8.256.nupkg.sha512"
+    },
+    "System.IO.Packaging/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9VV4KAbgRQZ79iEoG40KIeZy38O30oWwewScAST879+oki8g/Wa2HXZQgrhDDxQM4GkP1PnRJll05NMiVPbYAw==",
+      "path": "system.io.packaging/4.7.0",
+      "hashPath": "system.io.packaging.4.7.0.nupkg.sha512"
     }
   }
 }
