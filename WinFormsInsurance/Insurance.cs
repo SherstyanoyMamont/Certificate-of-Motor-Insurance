@@ -10,17 +10,21 @@ namespace Certificate_of_Motor_Insurance
     {
         public double BasePrice { get; private set; }
         public string? Coverage { get; private set; }
+        public DateTime Date { get; private set; }
         public double FinalPrice { get; private set; }
         public string? CertificateNumber { get; private set; }
         public Person Client { get; private set; }
-        public ListInsurance ListInsurance { get; private set; }
-        public Insurance(Person client, string? coverage) 
+
+        public static List<Insurance> ListInsurance = new List<Insurance>(1);
+        public Insurance(Person client, string? coverage, DateTime dateTime)
         {
-            BasePrice = 1000;                                                                                                           // Define the base price for the insurance.
-            CertificateNumber = "FCCC" + client.DateOfBirth.ToString("yyyyMMddHH", System.Globalization.CultureInfo.InvariantCulture);  // Create Certificate Number from client's date of birth
-            Client = client;
-            Coverage = coverage;
-            FinalPrice = CalculateInsuranceCost(client);
+            this.BasePrice = 1000;                                                                                                           // Define the base price for the insurance.
+            this.CertificateNumber = "FCCC" + client.DateOfBirth.ToString("yyyyMMddHH", System.Globalization.CultureInfo.InvariantCulture);  // Create Certificate Number from client's date of birth
+            this.Client = client;
+            this.Coverage = coverage;
+            this.Date = dateTime;
+            this.FinalPrice = CalculateInsuranceCost(client);
+            ListInsurance.Add(this);
         }
         public double CalculateInsuranceCost(Person client)
         {

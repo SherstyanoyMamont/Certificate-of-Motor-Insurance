@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ListInsurance.cs" />
     <Compile Remove="ReportPDF.cs" />
     <Compile Remove="ReportPDF.Designer.cs" />
     <Compile Remove="WordHelper.cs" />

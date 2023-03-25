@@ -13,6 +13,8 @@ namespace WinFormsInsurance
         {
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+
+
         }
     }
 }

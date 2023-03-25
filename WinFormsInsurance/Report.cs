@@ -14,22 +14,30 @@ namespace WinFormsInsurance
     public partial class Report : Form
     {
         Bitmap pageImage;
-        public ListInsurance listInsurance;
 
         public Report()
         {
             InitializeComponent();
         }
-        
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-        }
-        // Присваиваем значения кнопкам
-        private void Report_Shown(object sender, EventArgs e)
-        {
-            lDocNumber.Text = "SN338599324"; //listInsurance.Insurance.CertificateNumber.ToString();
+            richTextBox1.Lines.
         }
 
+        public static void QuickReplace(RichTextBox rtb, String word, String word2)
+        {
+            rtb.Text = rtb.Text.Replace(word, word2);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            QuickReplace(richTextBox1, textBox1.Text, textBox2.Text);
+        }
+        //// Присваиваем значения кнопкам
+        //private void Report_Shown(object sender, EventArgs e)
+        //{
+        //    lDocNumber.Text = "SN338599324"; //listInsurance.Insurance.CertificateNumber.ToString();
+        //}
         // Создаем документ ПДФ по форме
         private void BtnPrint_Click_1(object sender, EventArgs e)  // По нажатию на кнопку создаем обкартинку...
         {
@@ -37,18 +45,15 @@ namespace WinFormsInsurance
             richTextBox1.DrawToBitmap(pageImage, richTextBox1.ClientRectangle);
             printDocument1.Print();
         }
-
         // Печатаем картинку в пдф
         private void printDocument1_PrintPage_1(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(pageImage, 0, 0);
         }
-
         private void Report_Load(object sender, EventArgs e)
         {
 
         }
-
         // Вывод документа ПДФ в папку с файлом
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {

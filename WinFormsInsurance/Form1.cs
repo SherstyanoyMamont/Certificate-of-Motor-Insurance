@@ -11,9 +11,9 @@ namespace WinFormsInsurance
         }
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
-            // Присваиваем переменным значение полей на форме
             string? fullName = nameBox.Text;
-            DateTime dateOfBirth = Convert.ToDateTime("18/12/1998");//dateOfBirthBox;
+            DateTime dateOfBirth = Convert.ToDateTime(dateOfBirthBox);
+            DateTime dateTime = Convert.ToDateTime(dateBox);
             string? personLocation = countyBox.Text;
             string? phoneNumber = phoneBox.Text;
             string? email = emailBox.Text;
@@ -24,14 +24,19 @@ namespace WinFormsInsurance
 
             Car car = new Car(carMakeAndModel, emissions);
             Person client = new Person(personGender, fullName, dateOfBirth, personLocation, car, email, phoneNumber);
-            Insurance inshurance1 = new Insurance(client, coverage);
-            ListInsurance List = new ListInsurance(inshurance1);
+            Insurance inshurance1 = new Insurance(client, coverage, dateTime);
         }
         private void button1_Click(object sender, EventArgs e)
         {
             Report report = new Report();
-            //report.listInsurance
             report.Show();
+        }
+
+        private void SerchBut_Click(object sender, EventArgs e)
+        {
+            SearchForm search = new SearchForm();
+            //report.listInsurance
+            search.Show();
         }
     }
 }

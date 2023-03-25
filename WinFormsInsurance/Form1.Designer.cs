@@ -203,6 +203,7 @@
             SerchBut.TabIndex = 28;
             SerchBut.Text = "Search";
             SerchBut.UseVisualStyleBackColor = true;
+            SerchBut.Click += SerchBut_Click;
             // 
             // countyBox
             // 

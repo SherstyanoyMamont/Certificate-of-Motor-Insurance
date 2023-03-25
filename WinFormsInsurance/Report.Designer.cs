@@ -107,11 +107,13 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(0, 32);
+            richTextBox1.Dock = DockStyle.Fill;
+            richTextBox1.Location = new Point(0, 0);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(1165, 1181);
+            richTextBox1.Size = new Size(1180, 1230);
             richTextBox1.TabIndex = 12;
             richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            richTextBox1.TextChanged += richTextBox1_TextChanged;
             // 
             // tableLayoutPanel1
             // 
@@ -142,7 +144,6 @@
             MinimizeBox = false;
             Name = "Report";
             Text = "Report";
-            Shown += Report_Shown;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
