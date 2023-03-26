@@ -1,68 +1,96 @@
 ﻿using Certificate_of_Motor_Insurance;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Drawing.Drawing2D;
+using System.Drawing.Printing;
+
+using Newtonsoft.Json;
 
 namespace WinFormsInsurance
 {
+
+    //2480 x 3508  // A4
+    //1240 x 1754  // half A4
     public partial class Report : Form
     {
-        Bitmap pageImage;
+        // здесь нужен какой то класс который хранит всю информацию которую ты подгружаешь на конечный документ
+        // сделай это свойство public что бы его можно было присвоить из главной формы
+        //  public ListInsurance listInsurance;
 
         public Report()
         {
             InitializeComponent();
         }
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+
+        // это событие возникает когда форма отображается впервые
+
+        private void Report_Shown(object sender, EventArgs e)
         {
-            richTextBox1.Lines.
+            // здесь присвой значения всем label-ам  из класса с данными которые ты передаешь в эту форму
+
+            l_DocNumber.Text = "FCCC2209202300"; //listInsurance.Insurance.CertificateNumber.ToString();
+            l_Vehicle.Text = "Opel Corsa";
+            l_StartDate.Text = DateTime.Now.ToString();
+            l_ClientName.Text = "John Doe";
+            //etc...
         }
 
-        public static void QuickReplace(RichTextBox rtb, String word, String word2)
+        public Bitmap PanelToBitmap(Panel RootPanel)
         {
-            rtb.Text = rtb.Text.Replace(word, word2);
+            var sz = RootPanel.Size;
+
+            Bitmap panelImage = new Bitmap(sz.Width, sz.Height);
+            RootPanel.DrawToBitmap(panelImage, new Rectangle(0, 0, sz.Width, sz.Height));
+
+            return panelImage;
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnPrint_Click(object sender, EventArgs e)
         {
-            QuickReplace(richTextBox1, textBox1.Text, textBox2.Text);
+
+            // рисуем все что находится на панели sertificatePanel в изображение pageImage
+            Bitmap pageImage = PanelToBitmap(certificatePanel);
+            pageImage.Save("test.jpg"); //просто для проверки того как изображение с панели отрендерилось (оно выходит качественней чем pdf)
+
+            // размер бумаги ставим что бы соотвествовал размеру панели
+            // конечно размер панели желательно что бы был пропорционален А4
+            PrintDocument pd = new PrintDocument();
+            var pgs = pd.DefaultPageSettings;
+            pgs.PaperSize = new PaperSize("Custom Size", certificatePanel.Width, certificatePanel.Height);
+            pd.DefaultPageSettings = pgs;
+
+            pd.PrintPage += delegate (object o, PrintPageEventArgs e)
+            {
+                // SourceCopy вроде дает более точный результат, но появляются артефакты вокруг текста от компрессии изображения
+                e.Graphics.CompositingMode = CompositingMode.SourceOver;
+                e.Graphics.CompositingQuality = CompositingQuality.HighQuality;
+                e.Graphics.DrawImage(pageImage, 0, 0, e.PageBounds.Width, e.PageBounds.Height);
+            };
+
+            pd.Print();
+
         }
-        //// Присваиваем значения кнопкам
-        //private void Report_Shown(object sender, EventArgs e)
+
+
+        /////// JSON пример
+
+        //public void JSONSaveLoad()
         //{
-        //    lDocNumber.Text = "SN338599324"; //listInsurance.Insurance.CertificateNumber.ToString();
-        //}
-        // Создаем документ ПДФ по форме
-        private void BtnPrint_Click_1(object sender, EventArgs e)  // По нажатию на кнопку создаем обкартинку...
-        {
-            pageImage = new Bitmap(richTextBox1.Size.Width, richTextBox1.Size.Height);
-            richTextBox1.DrawToBitmap(pageImage, richTextBox1.ClientRectangle);
-            printDocument1.Print();
-        }
-        // Печатаем картинку в пдф
-        private void printDocument1_PrintPage_1(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            e.Graphics.DrawImage(pageImage, 0, 0);
-        }
-        private void Report_Load(object sender, EventArgs e)
-        {
 
-        }
-        // Вывод документа ПДФ в папку с файлом
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-            string fn = "CertificatePDF.pdf";
-            var proc = new System.Diagnostics.Process();
-            proc.StartInfo.FileName = fn;
-            proc.StartInfo.UseShellExecute = true;
-            proc.Start();
-        }
+
+        //    string? fileName = "instance.json";
+        //    string? jsonString = JsonConvert.SerializeObject(Insurance.ListInsurance);
+
+        //    JSONSaveLoad instance = new JSONSaveLoad(fileName, jsonString);
+
+        //    // cохранить в файл
+        //    File.WriteAllText(fileName, jsonString);
+        //    //File.WriteAllText(fileName, JsonConvert.SerializeObject(instance, Formatting.Indented)); - starting version
+        //    // загрузить обратно
+        //    instance = JsonConvert.DeserializeObject<JSONSaveLoad>(fileName);
+        //}
+
+
+
     }
 }
 

@@ -17,7 +17,7 @@ namespace Certificate_of_Motor_Insurance
         public string? PhoneNumber { get; private set; }
         public int ID { get; private set; }
         public Car Car { get; private set; }
-        internal Insurance Insurance { get; private set; }
+        public Insurance Insurance { get; private set; }
         public Person(string? gender, string? fullName, DateTime dateOfBirth, string? location, Car car, string? email, string? phoneNumber)
         {
             Gender = gender;

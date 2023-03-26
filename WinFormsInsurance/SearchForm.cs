@@ -1,6 +1,4 @@
 ﻿using Certificate_of_Motor_Insurance;
-using DocumentFormat.OpenXml.Office2010.ExcelAc;
-using DocumentFormat.OpenXml.Office2013.Word;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,7 +33,7 @@ namespace WinFormsInsurance
                 {
                     MessageBox.Show("Full name: " + o.Client.Gender + " " + o.Client.FullName +
                         "\nMake auto: " + o.Client.Car.MakeAndModel +
-                        "\nPrise: " + o.FinalPrice +
+                        "\nPrise: " + o.FinalPrice + " €" +
                         "\nDate: " + o.Date);
                     break;
                 }

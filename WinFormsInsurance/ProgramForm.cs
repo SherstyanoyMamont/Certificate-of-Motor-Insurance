@@ -1,7 +1,6 @@
 ﻿using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System;
 using Certificate_of_Motor_Insurance;
-using DocumentFormat.OpenXml.Spreadsheet;
 
 
 namespace WinFormsInsurance
@@ -13,8 +12,6 @@ namespace WinFormsInsurance
         {
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
-
-
         }
     }
 }

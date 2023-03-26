@@ -57,59 +57,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value>        
-                      Certificate of Motor Insurance
-
-
-
-
-   1.   Document Number	
-   2.   Description of Vehicle 	 
-   3.   Name of Policyholder
-   4.   Effective Date of the Commencement of Insurance 
-      for the purpose of the Acts 
-
-   5.   Date of expiry of Insurance 
-         MIDNIGHT: 
-
-   6.   Person or Classes of Persons entitled to drive as defined below
-         D- Any person who is driving with the document holder's consent
-
-         Provided that the person driving holds a licence to drive the Vehicle or has held and is not disqualified from holding or 
-         obtaining such a licence. 
-      
-   7.   Limitations to use as defined below 
-         Use only for Private Hire meaning the conveyance of passengers for hire or reward
-         Use for social, Domestic, and Pleasure purposes only 
-
-
-   8.   The policy does not cover 
-         Carriage of passenger for hire and/or reward
-         Racing, pace-setting, speed trials, motor rallies, competitions or trials
-         In connection with the motor trade 
-         Towing for reward a mechanically propelled vehicle
-         Semi-Trailer being part of an articulated vehicle 
-
-
-   I hereby certify that the Document to which this Certificate relates satisfies the requirements of the relevant law applicable in 
-   Great Britain, Northern Ireland, the Isle of Man, the Island of Guernsey, the Island of Jersey and the Island of Alderney.
-
-   Munster Motor Insurance
-   Thomond Parc House
-   Limerick
-
-                                                                                               Underwriter
-
-   Advice to Third Parties 
-   Nothing contained in this certificate affects your right as Third Party to make a claim.
-   NOTE: YOU SHOULD REFER TO YOUR POLICY FOR FULL DETAILS OF YOUR INSURANCE COVER
-</value>
+  <data name="label11.Text" xml:space="preserve">
+    <value>      Advice to Third Parties 
+      Nothing contained in this certificate affects your right as Third Party to make a claim.
+      NOTE: YOU SHOULD REFER TO YOUR POLICY FOR FULL DETAILS OF YOUR INSURANCE COVER</value>
   </data>
-  <metadata name="printDocument1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="label8.Text" xml:space="preserve">
+    <value>      I hereby certify that the Document to which this Certificate relates satisfies the requirements 
+      of the relevant law applicable in
+      Great Britain, Northern Ireland, the Isle of Man, the Island of Guernsey, the Island of Jersey 
+      and the Island of Alderney.</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>6.    Person or Classes of Persons entitled to drive as defined below
+       D- Any person who is driving with the document holder's consent
+       Provided that the person driving holds a licence to drive the Vehicle or has held and is not 
+       disqualified from holding or obtaining such a licence.</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>8.   The policy does not cover 
+      Carriage of passenger for hire and/or reward
+      Racing, pace-setting, speed trials, motor rallies, competitions or trials
+      In connection with the motor trade 
+      Towing for reward a mechanically propelled vehicle
+      Semi-Trailer being part of an articulated vehicle </value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>62</value>
+    <value>41</value>
   </metadata>
 </root>

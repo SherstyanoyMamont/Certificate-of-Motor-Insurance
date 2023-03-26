@@ -65,7 +65,6 @@
             button1.TabIndex = 0;
             button1.Text = "Done";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             button1.MouseClick += button1_MouseClick;
             // 
             // label1
