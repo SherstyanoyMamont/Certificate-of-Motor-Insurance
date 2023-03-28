@@ -11,7 +11,7 @@ namespace WinFormsInsurance
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new Form1()); 
         }
     }
 }
@@ -41,7 +41,7 @@ namespace WinFormsInsurance
 
 // Объекты
 //Car car = new Car(carMakeAndModel, emissions);
-//Person client = new Person(personGender, fullName, dateOfBirth, personLocation, car, email, phoneNumber);
+//Client client = new Client(personGender, fullName, dateOfBirth, personLocation, car, email, phoneNumber);
 //Insurance inshurance1 = new Insurance(client, coverage);
 //ListInsurance List = new ListInsurance(inshurance1);
 
@@ -87,7 +87,7 @@ namespace WinFormsInsurance
             string? phoneNumber = Console.ReadLine();
 
             Car car = new Car(carMake, carModel, emissions);
-            Person client = new Person(personGender, fullName, dateOfBirth, personLocation, car, email, phoneNumber);
+            Client client = new Client(personGender, fullName, dateOfBirth, personLocation, car, email, phoneNumber);
             Insurance inshurance1 = new Insurance(client, coverage);
             ListInsurance List = new ListInsurance(inshurance1);
 

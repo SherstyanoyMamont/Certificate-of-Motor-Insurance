@@ -13,23 +13,28 @@ namespace WinFormsInsurance
     {
         // здесь нужен какой то класс который хранит всю информацию которую ты подгружаешь на конечный документ
         // сделай это свойство public что бы его можно было присвоить из главной формы
-        //  public ListInsurance listInsurance;
+        public Insurance insurance;
 
         public Report()
         {
             InitializeComponent();
         }
 
+
         // это событие возникает когда форма отображается впервые
 
         private void Report_Shown(object sender, EventArgs e)
         {
-            // здесь присвой значения всем label-ам  из класса с данными которые ты передаешь в эту форму
 
-            l_DocNumber.Text = "FCCC2209202300"; //listInsurance.Insurance.CertificateNumber.ToString();
-            l_Vehicle.Text = "Opel Corsa";
-            l_StartDate.Text = DateTime.Now.ToString();
-            l_ClientName.Text = "John Doe";
+            // здесь присвой значения всем label-ам  из класса с данными которые ты передаешь в эту форму
+            //Form1 fm1 = new Insurance();
+
+            l_DocNumber.Text = insurance.CertificateNumber;  //listInsurance.Insurance.CertificateNumber.ToString();
+            //l_DocNumber.Text = fm1.Te;
+            l_Vehicle.Text = insurance.Client.Car.MakeAndModel;
+            l_StartDate.Text = insurance.Date.ToString();
+            l_ClientName.Text = insurance.Client.FullName;
+
             //etc...
         }
 
@@ -73,20 +78,20 @@ namespace WinFormsInsurance
 
         /////// JSON пример
 
-        //public void JSONSaveLoad()
+        //public void JSONManager()
         //{
 
 
         //    string? fileName = "instance.json";
         //    string? jsonString = JsonConvert.SerializeObject(Insurance.ListInsurance);
 
-        //    JSONSaveLoad instance = new JSONSaveLoad(fileName, jsonString);
+        //    JSONManager instance = new JSONManager(fileName, jsonString);
 
         //    // cохранить в файл
         //    File.WriteAllText(fileName, jsonString);
         //    //File.WriteAllText(fileName, JsonConvert.SerializeObject(instance, Formatting.Indented)); - starting version
         //    // загрузить обратно
-        //    instance = JsonConvert.DeserializeObject<JSONSaveLoad>(fileName);
+        //    instance = JsonConvert.DeserializeObject<JSONManager>(fileName);
         //}
 
 

@@ -1,4 +1,6 @@
-﻿namespace WinFormsInsurance
+﻿using Certificate_of_Motor_Insurance;
+
+namespace WinFormsInsurance
 {
     partial class Report
     {
@@ -62,8 +64,7 @@
             // 
             // BtnPrint
             // 
-            BtnPrint.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnPrint.Location = new Point(142, 8);
+            BtnPrint.Location = new Point(22, 8);
             BtnPrint.Name = "BtnPrint";
             BtnPrint.Size = new Size(112, 34);
             BtnPrint.TabIndex = 0;

@@ -1,1 +1,22 @@
-{"BasePrice":1000.0,"Coverage":"","Date":"2023-03-26T18:51:31.7074164+01:00","FinalPrice":1290.0,"CertificateNumber":"FCCC2023032618","Client":{"DateOfBirth":"2023-03-26T18:51:31.6341122+01:00","Age":0,"Gender":"","FullName":"Ivan Korotkov","Location":"","Email":"iikorotkov@gmai.com","PhoneNumber":"(085) 284-8110","ID":8785,"Car":{"MakeAndModel":"","Emission":""},"Insurance":null}}
+{
+  "BasePrice": 1000.0,
+  "Coverage": "",
+  "Date": "2023-03-27T12:16:30.932843+01:00",
+  "FinalPrice": 1290.0,
+  "CertificateNumber": "FCCC2023032712",
+  "Client": {
+    "DateOfBirth": "2023-03-27T12:16:30.8492383+01:00",
+    "Age": 0,
+    "Gender": "",
+    "FullName": "Ivan Korotkov",
+    "Location": "",
+    "Email": "iikorotkov@gmai.com",
+    "PhoneNumber": "(085) 284-8110",
+    "ID": 3007,
+    "Car": {
+      "MakeAndModel": "",
+      "Emission": ""
+    },
+    "Insurance": null
+  }
+}

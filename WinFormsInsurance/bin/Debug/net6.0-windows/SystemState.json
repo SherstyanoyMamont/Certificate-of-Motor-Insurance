@@ -1,0 +1,117 @@
+{
+  "Clients": [
+    {
+      "DateOfBirth": "2023-03-27T12:53:35.3192421+01:00",
+      "Age": 0,
+      "Gender": "Ms",
+      "FullName": "Ivan Korotkov",
+      "Location": "Clare",
+      "Email": "iikorotkov@gmai.com",
+      "PhoneNumber": "(085) 284-8110",
+      "ID": 9027,
+      "Car": {
+        "MakeAndModel": null,
+        "Emission": "High"
+      },
+      "Insurance": null
+    },
+    {
+      "DateOfBirth": "2023-03-27T12:53:57.3469107+01:00",
+      "Age": 0,
+      "Gender": "Mr",
+      "FullName": "Ivan Korotkov2",
+      "Location": "Limerick",
+      "Email": "iikorotkov@gmai.com",
+      "PhoneNumber": "(085) 284-8110",
+      "ID": 8814,
+      "Car": {
+        "MakeAndModel": null,
+        "Emission": "Low"
+      },
+      "Insurance": null
+    },
+    {
+      "DateOfBirth": "2023-03-27T13:09:01.7481895+01:00",
+      "Age": 0,
+      "Gender": "Mr",
+      "FullName": "Ivan Korotkov",
+      "Location": "Limerick",
+      "Email": "iikorotkov@gmai.com",
+      "PhoneNumber": "(085) 284-8110",
+      "ID": 4109,
+      "Car": {
+        "MakeAndModel": "BMW X6",
+        "Emission": "High"
+      },
+      "Insurance": null
+    }
+  ],
+  "Insurances": [
+    {
+      "BasePrice": 1000,
+      "Coverage": "Fully Comprehensive",
+      "Date": "0001-01-01T00:00:00",
+      "FinalPrice": 1665.0,
+      "CertificateNumber": "FCCC2023032712",
+      "Client": {
+        "DateOfBirth": "2023-03-27T12:53:35.3192421+01:00",
+        "Age": 0,
+        "Gender": "Ms",
+        "FullName": "Ivan Korotkov",
+        "Location": "Clare",
+        "Email": "iikorotkov@gmai.com",
+        "PhoneNumber": "(085) 284-8110",
+        "ID": 8759,
+        "Car": {
+          "MakeAndModel": null,
+          "Emission": "High"
+        },
+        "Insurance": null
+      }
+    },
+    {
+      "BasePrice": 1000,
+      "Coverage": "Fully Comprehensive",
+      "Date": "0001-01-01T00:00:00",
+      "FinalPrice": 1010.0,
+      "CertificateNumber": "FCCC2023032712",
+      "Client": {
+        "DateOfBirth": "2023-03-27T12:53:57.3469107+01:00",
+        "Age": 0,
+        "Gender": "Mr",
+        "FullName": "Ivan Korotkov2",
+        "Location": "Limerick",
+        "Email": "iikorotkov@gmai.com",
+        "PhoneNumber": "(085) 284-8110",
+        "ID": 1222,
+        "Car": {
+          "MakeAndModel": null,
+          "Emission": "Low"
+        },
+        "Insurance": null
+      }
+    },
+    {
+      "BasePrice": 1000,
+      "Coverage": "Fully Comprehensive",
+      "Date": "2023-03-27T13:09:01.8138164+01:00",
+      "FinalPrice": 1365.0,
+      "CertificateNumber": "FCCC2023032713",
+      "Client": {
+        "DateOfBirth": "2023-03-27T13:09:01.7481895+01:00",
+        "Age": 0,
+        "Gender": "Mr",
+        "FullName": "Ivan Korotkov",
+        "Location": "Limerick",
+        "Email": "iikorotkov@gmai.com",
+        "PhoneNumber": "(085) 284-8110",
+        "ID": 4109,
+        "Car": {
+          "MakeAndModel": "BMW X6",
+          "Emission": "High"
+        },
+        "Insurance": null
+      }
+    }
+  ]
+}

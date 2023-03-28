@@ -1,52 +1,72 @@
 ﻿using Certificate_of_Motor_Insurance;
 using Newtonsoft.Json;
 using System;
+using System.Linq;
 
 namespace WinFormsInsurance
 {
+
+    public static class Global
+    {
+        public static SystemState SystemState = null;
+    }
+
     public partial class Form1 : Form
     {
-
+       
         public Form1()
         {
             InitializeComponent();
         }
+
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
 
             string? fullName = nameBox.Text;
             DateTime dateOfBirth = dateOfBirthBox.Value;
             DateTime dateTime = dateBox.Value;
-            string? personLocation = countyBox.Text;
+            string? clientLocation = countyBox.Text;
             string? phoneNumber = phoneBox.Text;
             string? email = emailBox.Text;
-            string? personGender = genBox.Text;
+            string? clientGender = genBox.Text;
             string? coverage = coverageBox.Text;
             string? emissions = emissionBox.Text;
             string? carMakeAndModel = modelBox.Text;
 
-            // Create the objects
             Car car = new Car(carMakeAndModel, emissions);
-            Person client = new Person(personGender, fullName, dateOfBirth, personLocation, car, email, phoneNumber);
-            Insurance inshurance1 = new Insurance(client, coverage, dateTime);
-            JSONSaveLoad instance = new JSONSaveLoad(inshurance1);
+            Client client = new Client(clientGender, fullName, dateOfBirth, clientLocation, car, email, phoneNumber);
+            if (!Global.SystemState.Clients.Contains(client))
+            {
+                Global.SystemState.Clients.Add(client);
+            }
 
-            // загрузить обратно
-            //instance = JsonConvert.DeserializeObject<JSONSaveLoad>(instance.FileName);
+            Insurance insurance = new Insurance(client, coverage, dateTime);
+            if (!Global.SystemState.Insurances.Contains(insurance))
+            {
+                Global.SystemState.Insurances.Add(insurance);
+            }
 
-            // Save all info in ListInsurance in .text - file
-            File.WriteAllText(instance.FileName, instance.JsonString);
-
+            JSONManager.Save("SystemState.json", Global.SystemState);
 
             Report report = new Report();
+            report.insurance = insurance;
             report.Show();
         }
 
         private void SerchBut_Click(object sender, EventArgs e)
         {
             SearchForm search = new SearchForm();
-            //report.listInsurance
+            
             search.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Global.SystemState = JSONManager.Load("SystemState.json");
+            if (Global.SystemState == null)
+            {
+                Global.SystemState = new SystemState();
+            }
         }
     }
 }

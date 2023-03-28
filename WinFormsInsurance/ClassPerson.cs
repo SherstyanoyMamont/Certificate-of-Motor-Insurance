@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Certificate_of_Motor_Insurance
 {
-    public class Person
+    public class Client
     {
         public DateTime DateOfBirth { get; private set; }
         public int Age { get { return (int)((DateTime.Now - DateOfBirth).TotalDays / 365.242199); } }
@@ -18,7 +18,7 @@ namespace Certificate_of_Motor_Insurance
         public int ID { get; private set; }
         public Car Car { get; private set; }
         public Insurance Insurance { get; private set; }
-        public Person(string? gender, string? fullName, DateTime dateOfBirth, string? location, Car car, string? email, string? phoneNumber)
+        public Client(string? gender, string? fullName, DateTime dateOfBirth, string? location, Car car, string? email, string? phoneNumber)
         {
             Gender = gender;
             FullName = fullName;

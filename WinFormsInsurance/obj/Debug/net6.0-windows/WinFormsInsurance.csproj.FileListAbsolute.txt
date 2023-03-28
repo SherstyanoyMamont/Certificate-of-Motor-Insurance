@@ -1,5 +1,4 @@
 \\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.csproj.AssemblyReference.cache
-\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.Form1.resources
 \\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.csproj.GenerateResource.cache
 \\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.GeneratedMSBuildEditorConfig.editorconfig
 \\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.AssemblyInfoInputs.cache
@@ -18,7 +17,6 @@
 \\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.Properties.Resources.resources
 \\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.csproj.CopyComplete
 \\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.SearchForm.resources
-\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\bin\Debug\net6.0-windows\Certificate of Motor Insurance - without data.docx
 \\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.Report.resources
 E:\Workspace\Desktop\New folder (2)\Certificate-of-Motor-Insurance-main\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.csproj.AssemblyReference.cache
 E:\Workspace\Desktop\New folder (2)\Certificate-of-Motor-Insurance-main\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.Form1.resources
@@ -67,3 +65,4 @@ D:\Certificate-of-Motor-Insurance-main\WinFormsInsurance\obj\Debug\net6.0-window
 D:\Certificate-of-Motor-Insurance-main\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.genruntimeconfig.cache
 D:\Certificate-of-Motor-Insurance-main\WinFormsInsurance\obj\Debug\net6.0-windows\ref\WinFormsInsurance.dll
 \\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+\\wsl.localhost\Ubuntu\home\Certificate-of-Motor-Insurance\WinFormsInsurance\obj\Debug\net6.0-windows\WinFormsInsurance.Global.resources

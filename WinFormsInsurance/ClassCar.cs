@@ -10,7 +10,7 @@ namespace Certificate_of_Motor_Insurance
     {
         public string? MakeAndModel{ get; private set; }
         public string? Emission { get; private set; }
-        internal Person Person { get; private set; }
+        internal Client Person { get; private set; }
         public Car(string? carMakeAndModel, string? emission)
         {
             MakeAndModel = carMakeAndModel;

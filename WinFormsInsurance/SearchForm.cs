@@ -20,14 +20,14 @@ namespace WinFormsInsurance
         }
         private void addiistitem() // Выводим все записи в бокс
         {
-            for (int i = 0; i < Insurance.ListInsurance.Count; i++)
+            for (int i = 0; i < Global.SystemState.Insurances.Count; i++)
             {
-                listBox1.Items.Add(Insurance.ListInsurance[i].Client.FullName + ", " + Insurance.ListInsurance[i].CertificateNumber);
+                listBox1.Items.Add(Global.SystemState.Insurances[i].Client.FullName + ", " + Global.SystemState.Insurances[i].CertificateNumber);
             }
         }
         private void button1_Click(object sender, EventArgs e) // По нажатию на кнопку ищем запись
         {
-            foreach (var o in Insurance.ListInsurance)
+            foreach (var o in Global.SystemState.Insurances)
             {
                 if (o.Client.FullName == Convert.ToString(textBox1.Text))
                 {

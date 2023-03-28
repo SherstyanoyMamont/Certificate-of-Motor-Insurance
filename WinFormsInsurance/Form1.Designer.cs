@@ -216,7 +216,7 @@
             // 
             // personBindingSource
             // 
-            personBindingSource.DataSource = typeof(Certificate_of_Motor_Insurance.Person);
+            personBindingSource.DataSource = typeof(Certificate_of_Motor_Insurance.Client);
             // 
             // genBox
             // 
@@ -315,6 +315,7 @@
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)personBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
