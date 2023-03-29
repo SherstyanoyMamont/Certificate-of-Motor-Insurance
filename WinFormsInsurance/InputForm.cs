@@ -37,6 +37,7 @@ namespace WinFormsInsurance
             string? coverage = coverageBox.Text;
             string? emissions = emissionBox.Text;
             string? carMakeAndModel = modelBox.Text;
+            double insuranceDicsount = ApplyDiscount.Text == "Checked" ? 0.9 : 1;
 
             Car car = new Car(carMakeAndModel, emissions);
             Client client = new Client(clientGender, fullName, dateOfBirth, clientLocation, car, email, phoneNumber);
@@ -45,7 +46,7 @@ namespace WinFormsInsurance
                 Global.SystemState.Clients.Add(client);
             }
 
-            Insurance insurance = new Insurance(client, coverage, dateTime);
+            Insurance insurance = new Insurance(client, coverage, dateTime, insuranceDicsount);
             if (!Global.SystemState.Insurances.Contains(insurance))
             {
                 Global.SystemState.Insurances.Add(insurance);
@@ -72,6 +73,11 @@ namespace WinFormsInsurance
             {
                 Global.SystemState = new SystemState();
             }
+        }
+
+        private void ApplyDiscount_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

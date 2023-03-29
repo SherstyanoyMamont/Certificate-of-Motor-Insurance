@@ -18,29 +18,46 @@ namespace WinFormsInsurance
             InitializeComponent();
             addiistitem();
         }
-        private void addiistitem() // Выводим все записи в бокс
+
+        // Output all quotation in the list box
+        private void addiistitem()
         {
             for (int i = 0; i < Global.SystemState.Insurances.Count; i++)
             {
                 listBox1.Items.Add(Global.SystemState.Insurances[i].Client.FullName + ", " + Global.SystemState.Insurances[i].CertificateNumber);
             }
         }
-        private void button1_Click(object sender, EventArgs e) // По нажатию на кнопку ищем запись
+
+        // Search quotation when click the button
+        private void button1_Click(object sender, EventArgs e)
         {
             foreach (var o in Global.SystemState.Insurances)
             {
-                if (o.Client.FullName == Convert.ToString(textBox1.Text))
+                if (o.Client.FullName == Convert.ToString(textBox1.Text) || o.CertificateNumber == Convert.ToString(textBox1.Text) || o.Client.FullName + ", " + o.CertificateNumber == Convert.ToString(textBox1.Text))
                 {
-                    MessageBox.Show("Full name: " + o.Client.Gender + " " + o.Client.FullName +
+                    MessageBox.Show("Full name: " + o.Client.Gender + ". " + o.Client.FullName +
+                        "\nE-mail: " + o.Client.Email +
+                        "\nPhone number: " + o.Client.PhoneNumber +
+                        "\nLocation: " + o.Client.Location +
+                        "\nAge: " + o.Client.Age +
                         "\nMake auto: " + o.Client.Car.MakeAndModel +
-                        "\nPrise: " + o.FinalPrice + " €" +
+                        "\nPrise of insurance: " + o.FinalPrice + " €" +
                         "\nDate: " + o.Date);
                     break;
                 }
-                else
-                {
-                    MessageBox.Show("Record not Found");
-                }
+            }
+        }
+
+        // Copy text from listBox to search bar on double click
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listBox1.DoubleClick += new EventHandler(ListBox1_DoubleClick);
+        }
+        private void ListBox1_DoubleClick(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                textBox1.Text = listBox1.SelectedItem.ToString();
             }
         }
     }

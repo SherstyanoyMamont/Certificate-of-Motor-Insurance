@@ -53,13 +53,14 @@
             phoneBox = new MaskedTextBox();
             nameBox = new TextBox();
             dateOfBirthBox = new DateTimePicker();
+            ApplyDiscount = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)personBindingSource).BeginInit();
             SuspendLayout();
             // 
             // Done
             // 
             Done.Location = new Point(1045, 613);
-            Done.Name = "button1";
+            Done.Name = "Done";
             Done.Size = new Size(163, 55);
             Done.TabIndex = 0;
             Done.Text = "Done";
@@ -272,11 +273,23 @@
             dateOfBirthBox.Size = new Size(384, 31);
             dateOfBirthBox.TabIndex = 36;
             // 
-            // Form1
+            // ApplyDiscount
+            // 
+            ApplyDiscount.AutoSize = true;
+            ApplyDiscount.Location = new Point(603, 403);
+            ApplyDiscount.Name = "ApplyDiscount";
+            ApplyDiscount.Size = new Size(207, 29);
+            ApplyDiscount.TabIndex = 37;
+            ApplyDiscount.Text = "Apply Discount -10%";
+            ApplyDiscount.UseVisualStyleBackColor = true;
+            ApplyDiscount.CheckedChanged += ApplyDiscount_CheckedChanged;
+            // 
+            // InputForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1258, 696);
+            Controls.Add(ApplyDiscount);
             Controls.Add(dateOfBirthBox);
             Controls.Add(nameBox);
             Controls.Add(phoneBox);
@@ -288,7 +301,6 @@
             Controls.Add(SerchBut);
             Controls.Add(label9);
             Controls.Add(dateBox);
-            Controls.Add(button2);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label10);
@@ -301,7 +313,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(Done);
-            Name = "Form1";
+            Name = "InputForm";
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)personBindingSource).EndInit();
@@ -336,5 +348,6 @@
         private MaskedTextBox phoneBox;
         private TextBox nameBox;
         private DateTimePicker dateOfBirthBox;
+        private CheckBox ApplyDiscount;
     }
 }

@@ -11,17 +11,19 @@ namespace Certificate_of_Motor_Insurance
         public int BasePrice { get; set; } = 1000;
         public string? Coverage { get; private set; }
         public DateTime Date { get; private set; }
+        public double Discount { get; private set; }
         public double FinalPrice { get; private set; }
         public string? CertificateNumber { get; private set; }
         public Client Client { get; private set; }
 
-        public Insurance(Client client, string? coverage, DateTime dateTime)
+        public Insurance(Client client, string? coverage, DateTime dateTime, double insuranceDicsount)
         {                                                                                                         // Define the base price for the insurance.
             this.CertificateNumber = "FCCC" + client.DateOfBirth.ToString("yyyyMMddHH", System.Globalization.CultureInfo.InvariantCulture);  // Create Certificate Number from client's date of birth
             this.Client = client;
             this.Coverage = coverage;
             this.Date = dateTime;
-            this.FinalPrice = CalculateInsuranceCost();
+            this.Discount = insuranceDicsount;
+            this.FinalPrice = CalculateInsuranceCost() * Discount;
         }
 
         public double CalculateInsuranceCost()
@@ -68,6 +70,5 @@ namespace Certificate_of_Motor_Insurance
 
             return BasePrice * genderFactor + ageFactor + locationFactor + carModelFactor + emissionsFactor + coverageFactor; // Return the final price.
         }
-
     }
 }
