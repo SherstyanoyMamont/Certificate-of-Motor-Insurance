@@ -1,14 +1,14 @@
 {
   "Clients": [
     {
-      "DateOfBirth": "2023-03-27T12:53:35.3192421+01:00",
+      "DateOfBirth": "2023-03-27T13:53:35.3192421+02:00",
       "Age": 0,
       "Gender": "Ms",
       "FullName": "Ivan Korotkov",
       "Location": "Clare",
       "Email": "iikorotkov@gmai.com",
       "PhoneNumber": "(085) 284-8110",
-      "ID": 9027,
+      "ID": 4073,
       "Car": {
         "MakeAndModel": null,
         "Emission": "High"
@@ -16,14 +16,14 @@
       "Insurance": null
     },
     {
-      "DateOfBirth": "2023-03-27T12:53:57.3469107+01:00",
+      "DateOfBirth": "2023-03-27T13:53:57.3469107+02:00",
       "Age": 0,
       "Gender": "Mr",
       "FullName": "Ivan Korotkov2",
       "Location": "Limerick",
       "Email": "iikorotkov@gmai.com",
       "PhoneNumber": "(085) 284-8110",
-      "ID": 8814,
+      "ID": 5873,
       "Car": {
         "MakeAndModel": null,
         "Emission": "Low"
@@ -31,17 +31,107 @@
       "Insurance": null
     },
     {
-      "DateOfBirth": "2023-03-27T13:09:01.7481895+01:00",
+      "DateOfBirth": "2023-03-27T14:09:01.7481895+02:00",
       "Age": 0,
       "Gender": "Mr",
       "FullName": "Ivan Korotkov",
       "Location": "Limerick",
       "Email": "iikorotkov@gmai.com",
       "PhoneNumber": "(085) 284-8110",
-      "ID": 4109,
+      "ID": 4752,
       "Car": {
-        "MakeAndModel": "BMW X6",
+        "MakeAndModel": null,
         "Emission": "High"
+      },
+      "Insurance": null
+    },
+    {
+      "DateOfBirth": "2023-03-29T19:20:41.5558002+02:00",
+      "Age": 0,
+      "Gender": "Mr",
+      "FullName": "Olha Savelievs",
+      "Location": "Limerick",
+      "Email": "iikorotkov@gmai.com",
+      "PhoneNumber": "(085) 284-8110",
+      "ID": 7209,
+      "Car": {
+        "MakeAndModel": null,
+        "Emission": "High"
+      },
+      "Insurance": null
+    },
+    {
+      "DateOfBirth": "2023-03-29T19:32:23.7850868+02:00",
+      "Age": 0,
+      "Gender": "",
+      "FullName": "Ivan Korotkov",
+      "Location": "",
+      "Email": "iikorotkov@gmai.com",
+      "PhoneNumber": "(085) 284-8110",
+      "ID": 7993,
+      "Car": {
+        "MakeAndModel": null,
+        "Emission": ""
+      },
+      "Insurance": null
+    },
+    {
+      "DateOfBirth": "2023-03-29T20:04:16.8329301+02:00",
+      "Age": 0,
+      "Gender": "",
+      "FullName": "Ivan Korotkov",
+      "Location": "",
+      "Email": "iikorotkov@gmai.com",
+      "PhoneNumber": "(085) 284-8110",
+      "ID": 3221,
+      "Car": {
+        "MakeAndModel": null,
+        "Emission": ""
+      },
+      "Insurance": null
+    },
+    {
+      "DateOfBirth": "2023-03-29T20:34:58.8494804+02:00",
+      "Age": 0,
+      "Gender": "",
+      "FullName": "Ivan Korotkov",
+      "Location": "",
+      "Email": "iikorotkov@gmai.com",
+      "PhoneNumber": "(085) 284-8110",
+      "ID": 3697,
+      "Car": {
+        "MakeAndModel": null,
+        "Emission": ""
+      },
+      "Insurance": null
+    },
+    {
+      "DateOfBirth": "1997-02-28T21:38:36",
+      "Age": 26,
+      "Gender": "Ms",
+      "FullName": "Natali Mure",
+      "Location": "Tipperary",
+      "Email": "iikorotkov@gmai.com",
+      "PhoneNumber": "(085) 284-8110",
+      "ID": 6938,
+      "Car": {
+        "MakeAndModel": "Toyota Yaris",
+        "Emission": "Low"
+      },
+      "Insurance": null
+    },
+    {
+      "DateOfBirth": "1997-02-28T21:38:36",
+      "Age": 26,
+      "Gender": "Ms",
+      "FullName": "Natali Mure",
+      "Location": "Tipperary",
+      "Email": "iikorotkov@gmai.com",
+      "PhoneNumber": "(085) 284-8110",
+      "ID": 9089,
+      "Car": {
+        "MakeAndModel": "Toyota Yaris",
+        "Emission": "Low"
       },
       "Insurance": null
     }
@@ -52,16 +142,16 @@
       "Coverage": "Fully Comprehensive",
       "Date": "0001-01-01T00:00:00",
       "FinalPrice": 1665.0,
-      "CertificateNumber": "FCCC2023032712",
+      "CertificateNumber": "FCCC2023032713",
       "Client": {
-        "DateOfBirth": "2023-03-27T12:53:35.3192421+01:00",
+        "DateOfBirth": "2023-03-27T13:53:35.3192421+02:00",
         "Age": 0,
         "Gender": "Ms",
         "FullName": "Ivan Korotkov",
         "Location": "Clare",
         "Email": "iikorotkov@gmai.com",
         "PhoneNumber": "(085) 284-8110",
-        "ID": 8759,
+        "ID": 5672,
         "Car": {
           "MakeAndModel": null,
           "Emission": "High"
@@ -74,16 +164,16 @@
       "Coverage": "Fully Comprehensive",
       "Date": "0001-01-01T00:00:00",
       "FinalPrice": 1010.0,
-      "CertificateNumber": "FCCC2023032712",
+      "CertificateNumber": "FCCC2023032713",
       "Client": {
-        "DateOfBirth": "2023-03-27T12:53:57.3469107+01:00",
+        "DateOfBirth": "2023-03-27T13:53:57.3469107+02:00",
         "Age": 0,
         "Gender": "Mr",
         "FullName": "Ivan Korotkov2",
         "Location": "Limerick",
         "Email": "iikorotkov@gmai.com",
         "PhoneNumber": "(085) 284-8110",
-        "ID": 1222,
+        "ID": 6127,
         "Car": {
           "MakeAndModel": null,
           "Emission": "Low"
@@ -94,21 +184,153 @@
     {
       "BasePrice": 1000,
       "Coverage": "Fully Comprehensive",
-      "Date": "2023-03-27T13:09:01.8138164+01:00",
+      "Date": "0001-01-01T00:00:00",
       "FinalPrice": 1365.0,
-      "CertificateNumber": "FCCC2023032713",
+      "CertificateNumber": "FCCC2023032714",
       "Client": {
-        "DateOfBirth": "2023-03-27T13:09:01.7481895+01:00",
+        "DateOfBirth": "2023-03-27T14:09:01.7481895+02:00",
         "Age": 0,
         "Gender": "Mr",
         "FullName": "Ivan Korotkov",
         "Location": "Limerick",
         "Email": "iikorotkov@gmai.com",
         "PhoneNumber": "(085) 284-8110",
-        "ID": 4109,
+        "ID": 3707,
         "Car": {
-          "MakeAndModel": "BMW X6",
+          "MakeAndModel": null,
           "Emission": "High"
+        },
+        "Insurance": null
+      }
+    },
+    {
+      "BasePrice": 1000,
+      "Coverage": "Fully Comprehensive",
+      "Date": "0001-01-01T00:00:00",
+      "FinalPrice": 1365.0,
+      "CertificateNumber": "FCCC2023032919",
+      "Client": {
+        "DateOfBirth": "2023-03-29T19:20:41.5558002+02:00",
+        "Age": 0,
+        "Gender": "Mr",
+        "FullName": "Olha Savelievs",
+        "Location": "Limerick",
+        "Email": "iikorotkov@gmai.com",
+        "PhoneNumber": "(085) 284-8110",
+        "ID": 4899,
+        "Car": {
+          "MakeAndModel": null,
+          "Emission": "High"
+        },
+        "Insurance": null
+      }
+    },
+    {
+      "BasePrice": 1000,
+      "Coverage": "",
+      "Date": "0001-01-01T00:00:00",
+      "FinalPrice": 1290.0,
+      "CertificateNumber": "FCCC2023032919",
+      "Client": {
+        "DateOfBirth": "2023-03-29T19:32:23.7850868+02:00",
+        "Age": 0,
+        "Gender": "",
+        "FullName": "Ivan Korotkov",
+        "Location": "",
+        "Email": "iikorotkov@gmai.com",
+        "PhoneNumber": "(085) 284-8110",
+        "ID": 8551,
+        "Car": {
+          "MakeAndModel": null,
+          "Emission": ""
+        },
+        "Insurance": null
+      }
+    },
+    {
+      "BasePrice": 1000,
+      "Coverage": "",
+      "Date": "0001-01-01T00:00:00",
+      "FinalPrice": 1290.0,
+      "CertificateNumber": "FCCC2023032920",
+      "Client": {
+        "DateOfBirth": "2023-03-29T20:04:16.8329301+02:00",
+        "Age": 0,
+        "Gender": "",
+        "FullName": "Ivan Korotkov",
+        "Location": "",
+        "Email": "iikorotkov@gmai.com",
+        "PhoneNumber": "(085) 284-8110",
+        "ID": 1007,
+        "Car": {
+          "MakeAndModel": null,
+          "Emission": ""
+        },
+        "Insurance": null
+      }
+    },
+    {
+      "BasePrice": 1000,
+      "Coverage": "",
+      "Date": "0001-01-01T00:00:00",
+      "FinalPrice": 1290.0,
+      "CertificateNumber": "FCCC2023032920",
+      "Client": {
+        "DateOfBirth": "2023-03-29T20:34:58.8494804+02:00",
+        "Age": 0,
+        "Gender": "",
+        "FullName": "Ivan Korotkov",
+        "Location": "",
+        "Email": "iikorotkov@gmai.com",
+        "PhoneNumber": "(085) 284-8110",
+        "ID": 3452,
+        "Car": {
+          "MakeAndModel": null,
+          "Emission": ""
+        },
+        "Insurance": null
+      }
+    },
+    {
+      "BasePrice": 1000,
+      "Coverage": "Third Party Fire and Theft",
+      "Date": "2023-03-29T21:38:36.7353717+02:00",
+      "FinalPrice": 275.0,
+      "CertificateNumber": "FCCC1997022821",
+      "Client": {
+        "DateOfBirth": "1997-02-28T21:38:36",
+        "Age": 26,
+        "Gender": "Ms",
+        "FullName": "Natali Mure",
+        "Location": "Tipperary",
+        "Email": "iikorotkov@gmai.com",
+        "PhoneNumber": "(085) 284-8110",
+        "ID": 6938,
+        "Car": {
+          "MakeAndModel": "Toyota Yaris",
+          "Emission": "Low"
+        },
+        "Insurance": null
+      }
+    },
+    {
+      "BasePrice": 1000,
+      "Coverage": "Third Party Fire and Theft",
+      "Date": "2023-03-29T21:38:36.7353717+02:00",
+      "FinalPrice": 275.0,
+      "CertificateNumber": "FCCC1997022821",
+      "Client": {
+        "DateOfBirth": "1997-02-28T21:38:36",
+        "Age": 26,
+        "Gender": "Ms",
+        "FullName": "Natali Mure",
+        "Location": "Tipperary",
+        "Email": "iikorotkov@gmai.com",
+        "PhoneNumber": "(085) 284-8110",
+        "ID": 9089,
+        "Car": {
+          "MakeAndModel": "Toyota Yaris",
+          "Emission": "Low"
         },
         "Insurance": null
       }

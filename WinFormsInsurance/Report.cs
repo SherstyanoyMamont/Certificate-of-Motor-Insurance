@@ -59,6 +59,11 @@ namespace WinFormsInsurance
             // размер бумаги ставим что бы соотвествовал размеру панели
             // конечно размер панели желательно что бы был пропорционален А4
             PrintDocument pd = new PrintDocument();
+
+            PrintDialog printDialog1 = new PrintDialog();
+            printDialog1.Document = pd;
+            DialogResult result = printDialog1.ShowDialog();
+
             var pgs = pd.DefaultPageSettings;
             pgs.PaperSize = new PaperSize("Custom Size", certificatePanel.Width, certificatePanel.Height);
             pd.DefaultPageSettings = pgs;
@@ -71,7 +76,10 @@ namespace WinFormsInsurance
                 e.Graphics.DrawImage(pageImage, 0, 0, e.PageBounds.Width, e.PageBounds.Height);
             };
 
-            pd.Print();
+            if (result == DialogResult.OK)
+            {
+                pd.Print();
+            }
 
         }
 

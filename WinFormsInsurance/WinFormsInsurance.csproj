@@ -10,6 +10,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Form1.cs" />
+    <Compile Remove="Form1.Designer.cs" />
     <Compile Remove="ListInsurance.cs" />
     <Compile Remove="ReportPDF.cs" />
     <Compile Remove="ReportPDF.Designer.cs" />
@@ -17,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="Form1.resx" />
     <EmbeddedResource Remove="ReportPDF.resx" />
   </ItemGroup>
 
